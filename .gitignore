@@ -1,0 +1,17 @@
+*.egg-info/
+build/
+*.o
+*.a
+cde
+cde-exec
+okapi
+dist/
+strace-4.6/.deps/
+strace-4.6/Makefile
+strace-4.6/config.h
+strace-4.6/config.log
+strace-4.6/config.status
+strace-4.6/linux/ioctlent.h
+strace-4.6/stamp-h1
+strace-4.6/tests/Makefile
+*.pyc
