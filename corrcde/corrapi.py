@@ -1,4 +1,3 @@
-import yaml
 import json
 import httplib2
 import requests
@@ -52,14 +51,8 @@ def put_project(client, url, project_name, long_name='No goals provided.', descr
         response, content = client.request(url, 'POST', json.dumps(content), headers=headers)
         return response, content.decode('utf-8')
 
-def rpz_conf_to_corr():
-    stream = open('.reprozip-trace/config.yml', "r")
-    config_yaml = yaml.load(stream)
-    return config_yaml
-
 def push_record(client, server_url, project):
         record_id = None
-        config_yaml = rpz_conf_to_corr()
         url = "%sproject/record/create/%s" % (server_url, project['id'])
         headers = {'Content-Type': 'application/json'}
         _content = {}
